@@ -10,7 +10,7 @@ BoundOnnxExpression::BoundOnnxExpression(string path)
         LogicalType()
     ), 
     path(path) 
-{   
+{
     this->model = make_uniq<onnx::ModelProto>();
     ONNX_NAMESPACE::LoadProtoFromPath<onnx::ModelProto>(path, *this->model.get());
     // TODO 解析输入类型和输出类型

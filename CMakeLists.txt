@@ -494,8 +494,7 @@ include_directories(third_party/pcg)
 include_directories(third_party/tdigest)
 include_directories(third_party/mbedtls/include)
 include_directories(third_party/jaro_winkler)
-include_directories(third_party/onnx_optimizer/onnx_optimizer)
-include_directories(third_party/onnx_optimizer/onnx_optimizer/third_party/onnx)
+include_directories(third_party/onnx)
 
 # todo only regenerate ub file if one of the input files changed hack alert
 function(enable_unity_build UB_SUFFIX SOURCE_VARIABLE_NAME)
@@ -1093,10 +1092,8 @@ endif()
 if (NOT EXTENSION_CONFIG_BUILD )
 # Write the export set for build and install tree
 install(EXPORT "${DUCKDB_EXPORT_SET}" DESTINATION "${INSTALL_CMAKE_DIR}")
-export(EXPORT "${DUCKDB_EXPORT_SET}"
-       FILE "${PROJECT_BINARY_DIR}/${DUCKDB_EXPORT_SET}.cmake")
-export(EXPORT ONNXOptimizerTargets
-       FILE "${PROJECT_BINARY_DIR}/ONNXOptimizerTargets.cmake")
+# export(EXPORT "${DUCKDB_EXPORT_SET}"
+#       FILE "${PROJECT_BINARY_DIR}/${DUCKDB_EXPORT_SET}.cmake")
 
 # Only write the cmake package configuration if the templates exist
 set(CMAKE_CONFIG_TEMPLATE "${CMAKE_CURRENT_SOURCE_DIR}/DuckDBConfig.cmake.in")

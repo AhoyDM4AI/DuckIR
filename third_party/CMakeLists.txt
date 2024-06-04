@@ -12,7 +12,8 @@ if(NOT AMALGAMATION_BUILD)
   add_subdirectory(fastpforlib)
   add_subdirectory(mbedtls)
   add_subdirectory(fsst)
-  add_subdirectory(onnx_optimizer)
+  add_subdirectory(onnx)
+  add_library(onnx::onnx ALIAS onnx)
 endif()
 
 if(NOT WIN32

@@ -344,3 +344,7 @@ extension/extension_config_local.cmake
 
 # extension_external dir
 extension_external
+
+# my cmake build convention
+build_debug
+build_release
