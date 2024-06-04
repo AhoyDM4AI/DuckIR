@@ -1,38 +1,14 @@
-<div align="center">
-  <img src="https://duckdb.org/images/logo-dl/DuckDB_Logo-stacked.svg" height="120">
-</div>
-<br>
+## DuckIR
+Melt a Traditional Database (DuckB) to support ML-based prediction queries.
+We call this project as Duck Intermediate Representation (DuckIR) temporarily.
 
-
-
-
-<p align="center">
-  <a href="https://github.com/duckdb/duckdb/actions">
-    <img src="https://github.com/duckdb/duckdb/actions/workflows/Main.yml/badge.svg?branch=main" alt="Github Actions Badge">
-  </a>
-  <a href="https://discord.gg/tcvwpjfnZx">
-    <img src="https://shields.io/discord/909674491309850675" alt="discord" />
-  </a>
-  <a href="https://github.com/duckdb/duckdb/releases/">
-    <img src="https://img.shields.io/github/v/release/duckdb/duckdb?color=brightgreen&display_name=tag&logo=duckdb&logoColor=white" alt="Latest Release">
-  </a>
-</p>
-
-## DuckDB
-DuckDB is a high-performance analytical database system. It is designed to be fast, reliable, portable, and easy to use. DuckDB provides a rich SQL dialect, with support far beyond basic SQL. DuckDB supports arbitrary and nested correlated subqueries, window functions, collations, complex types (arrays, structs), and more. For more information on using DuckDB, please refer to the [DuckDB documentation](https://duckdb.org/docs/).
+## Key Modules Plan
+* A unified logical plan IR combined with DuckDB Logical plan and onnx Graph
+* A unified metadata/catalog for ML related info storage
+* A default query execution runtime (DuckDB with ONNX Runtime for now)
 
 ## Installation
 If you want to install and use DuckDB, please see [our website](https://www.duckdb.org) for installation and usage instructions.
-
-## Data Import
-For CSV files and Parquet files, data import is as simple as referencing the file in the FROM clause:
-
-```sql
-SELECT * FROM 'myfile.csv';
-SELECT * FROM 'myfile.parquet';
-```
-
-Refer to our [Data Import](https://duckdb.org/docs/data/overview) section for more information.
 
 ## SQL Reference
 The [website](https://duckdb.org/docs/sql/introduction) contains a reference of functions and SQL constructs available in DuckDB.
