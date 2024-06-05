@@ -1,11 +1,11 @@
 #include "duckdb_python/pyconnection/pyconnection.hpp"
 
 #include "duckdb/catalog/default/default_types.hpp"
-#include "duckdb/plugin/physical/common/arrow/arrow.hpp"
+#include "duckdb/runtime/default/common/arrow/arrow.hpp"
 #include "duckdb/common/enums/file_compression_type.hpp"
 #include "duckdb/common/printer.hpp"
 #include "duckdb/common/types.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
 #include "duckdb/function/table/read_csv.hpp"
 #include "duckdb/main/client_config.hpp"
 #include "duckdb/main/client_context.hpp"

@@ -10,7 +10,7 @@
 #endif
 
 #include <duckdb/function/scalar/string_functions.hpp>
-#include <duckdb/plugin/physical/storage/buffer_manager.hpp>
+#include <duckdb/runtime/default/storage/buffer_manager.hpp>
 #include <iostream>
 #include <thread>
 

@@ -404,7 +404,7 @@
   {
     "class": "MultiFileReaderOptions",
     "includes": [
-      "duckdb/plugin/physical/common/file_system/multi_file_reader_options.hpp"
+      "duckdb/runtime/default/common/file_system/multi_file_reader_options.hpp"
     ],
     "members": [
       {
@@ -443,7 +443,7 @@
   {
     "class": "MultiFileReaderBindData",
     "includes": [
-      "duckdb/plugin/physical/common/file_system/multi_file_reader.hpp"
+      "duckdb/runtime/default/common/file_system/multi_file_reader.hpp"
     ],
     "members": [
       {

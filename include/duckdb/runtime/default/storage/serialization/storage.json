@@ -2,7 +2,7 @@
   {
     "class": "MetaBlockPointer",
     "includes": [
-      "duckdb/plugin/physical/storage/block.hpp"
+      "duckdb/runtime/default/storage/block.hpp"
     ],
     "members": [
       {
@@ -38,7 +38,7 @@
   },  {
     "class": "DataPointer",
     "includes": [
-      "duckdb/plugin/physical/storage/data_pointer.hpp"
+      "duckdb/runtime/default/storage/data_pointer.hpp"
     ],
     "members": [
       {

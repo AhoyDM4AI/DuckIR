@@ -1,11 +1,11 @@
 #include "duckdb.hpp"
 #ifndef DUCKDB_AMALGAMATION
-#include "duckdb/plugin/physical/execution/operator/aggregate/physical_window.hpp"
+#include "duckdb/runtime/default/execution/operator/aggregate/physical_window.hpp"
 #include "duckdb/planner/expression.hpp"
 #include "duckdb/planner/expression/bound_window_expression.hpp"
 #include "duckdb/planner/expression/bound_constant_expression.hpp"
 #include "duckdb/planner/expression/bound_reference_expression.hpp"
-#include "duckdb/plugin/physical/parallel/thread_context.hpp"
+#include "duckdb/runtime/default/parallel/thread_context.hpp"
 #include "duckdb/function/aggregate/distributive_functions.hpp"
 #endif
 
