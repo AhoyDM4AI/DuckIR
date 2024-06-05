@@ -3,7 +3,7 @@ project(example-c++)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(../../src/include)
+include_directories(../../include)
 link_directories(../../build/src)
 
 add_definitions(-DONNX_ML=1)

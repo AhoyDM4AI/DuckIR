@@ -40,9 +40,9 @@ if(AMALGAMATION_BUILD)
   link_extension_libraries(duckdb_static)
 
   install(FILES "${PROJECT_SOURCE_DIR}/src/amalgamation/duckdb.hpp"
-                "${PROJECT_SOURCE_DIR}/src/include/duckdb.h"
+                "../include/duckdb.h"
           DESTINATION "${INSTALL_INCLUDE_DIR}")
-  install(FILES "${PROJECT_SOURCE_DIR}/src/include/duckdb/common/winapi.hpp"
+  install(FILES "../include/duckdb/common/winapi.hpp"
           DESTINATION "${INSTALL_INCLUDE_DIR}/duckdb/common")
 
 else()
@@ -99,12 +99,12 @@ else()
                          $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
   install(
-    DIRECTORY "${PROJECT_SOURCE_DIR}/src/include/duckdb"
+    DIRECTORY "../include/duckdb"
     DESTINATION "${INSTALL_INCLUDE_DIR}"
     FILES_MATCHING
     PATTERN "*.hpp")
-  install(FILES "${PROJECT_SOURCE_DIR}/src/include/duckdb.hpp"
-                "${PROJECT_SOURCE_DIR}/src/include/duckdb.h"
+  install(FILES "../include/duckdb.hpp"
+                "../include/duckdb.h"
           DESTINATION "${INSTALL_INCLUDE_DIR}")
 
 endif()

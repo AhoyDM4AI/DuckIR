@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.12)
 project(example-c)
 
-include_directories(../../src/include)
+include_directories(../../include)
 link_directories(../../build/release/src)
 
 add_executable(example main.c)

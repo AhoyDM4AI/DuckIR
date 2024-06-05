@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 
-include_directories(../../src/include)
+include_directories(../../include)
 link_directories(../../build/debug/src)
 
 add_executable(example main.cpp)
