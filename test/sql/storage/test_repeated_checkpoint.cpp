@@ -1,7 +1,7 @@
 #include "catch.hpp"
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 #include "test_helpers.hpp"
-#include "duckdb/plugin/physical/storage/storage_info.hpp"
+#include "duckdb/runtime/default/storage/storage_info.hpp"
 
 #include <fstream>
 

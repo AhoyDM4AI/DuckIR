@@ -45,23 +45,23 @@ using namespace icu;
 #endif
 
 /**
- * Internal structure of an ICU plugin. 
+ * Internal structure of an ICU runtime.
  */
 
 struct UPlugData {
-  UPlugEntrypoint  *entrypoint; /**< plugin entrypoint */
+  UPlugEntrypoint  *entrypoint; /**< runtime entrypoint */
   uint32_t structSize;    /**< initialized to the size of this structure */
   uint32_t token;         /**< must be U_PLUG_TOKEN */
-  void *lib;              /**< plugin library, or NULL */
+  void *lib;              /**< runtime library, or NULL */
   char libName[UPLUG_NAME_MAX];   /**< library name */
-  char sym[UPLUG_NAME_MAX];        /**< plugin symbol, or NULL */
+  char sym[UPLUG_NAME_MAX];        /**< runtime symbol, or NULL */
   char config[UPLUG_NAME_MAX];     /**< configuration data */
   void *context;          /**< user context data */
-  char name[UPLUG_NAME_MAX];   /**< name of plugin */
-  UPlugLevel  level; /**< level of plugin */
-  UBool   awaitingLoad; /**< TRUE if the plugin is awaiting a load call */
-  UBool   dontUnload; /**< TRUE if plugin must stay resident (leak plugin and lib) */
-  UErrorCode pluginStatus; /**< status code of plugin */
+  char name[UPLUG_NAME_MAX];   /**< name of runtime */
+  UPlugLevel  level; /**< level of runtime */
+  UBool   awaitingLoad; /**< TRUE if the runtime is awaiting a load call */
+  UBool   dontUnload; /**< TRUE if runtime must stay resident (leak runtime and lib) */
+  UErrorCode pluginStatus; /**< status code of runtime */
 };
 
 
@@ -269,7 +269,7 @@ uplug_nextPlug(UPlugData *prior) {
 
 
 /**
- * Call the plugin with some params
+ * Call the runtime with some params
  */
 static void uplug_callPlug(UPlugData *plug, UPlugReason reason, UErrorCode *status) {
   UPlugTokenReturn token;
@@ -526,7 +526,7 @@ uplug_getPlugLoadStatus(UPlugData *plug) {
 
 
 /**
- * Initialize a plugin fron an entrypoint and library - but don't load it.
+ * Initialize a runtime fron an entrypoint and library - but don't load it.
  */
 static UPlugData* uplug_initPlugFromEntrypointAndLibrary(UPlugEntrypoint *entrypoint, const char *config, void *lib, const char *sym,
                                                          UErrorCode *status) {
@@ -581,7 +581,7 @@ uplug_initErrorPlug(const char *libName, const char *sym, const char *config, co
 }
 
 /**
- * Fetch a plugin from DLL, and then initialize it from a library- but don't load it.
+ * Fetch a runtime from DLL, and then initialize it from a library- but don't load it.
  */
 static UPlugData* 
 uplug_initPlugFromLibrary(const char *libName, const char *sym, const char *config, UErrorCode *status) {
@@ -597,7 +597,7 @@ uplug_initPlugFromLibrary(const char *libName, const char *sym, const char *conf
       plug = uplug_initPlugFromEntrypointAndLibrary(entrypoint, config, lib, sym, status);
       if(plug!=NULL&&U_SUCCESS(*status)) {
         plug->lib = lib; /* plug takes ownership of library */
-        lib = NULL; /* library is now owned by plugin. */
+        lib = NULL; /* library is now owned by runtime. */
       }
     } else {
       UErrorCode subStatus = U_ZERO_ERROR;
@@ -703,7 +703,7 @@ static void uplug_loadWaitingPlugs(UErrorCode *status) {
 #endif
 }
 
-/* Name of the plugin config file */
+/* Name of the runtime config file */
 static char plugin_file[2048] = "";
 #endif
 
@@ -748,7 +748,7 @@ uplug_init(UErrorCode *status) {
         
     CharString pluginFile;
 #ifdef OS390BATCH
-/* There are potentially a lot of ways to implement a plugin directory on OS390/zOS  */
+/* There are potentially a lot of ways to implement a runtime directory on OS390/zOS  */
 /* Keeping in mind that unauthorized file access is logged, monitored, and enforced  */
 /* I've chosen to open a DDNAME if BATCH and leave it alone for (presumably) UNIX    */
 /* System Services.  Alternative techniques might be allocating a member in          */
@@ -869,7 +869,7 @@ uplug_init(UErrorCode *status) {
       fclose(f);
     } else {
 #if UPLUG_TRACE
-      DBG((stderr, "Can't open plugin file %s\n", plugin_file));
+      DBG((stderr, "Can't open runtime file %s\n", plugin_file));
 #endif
     }
   }

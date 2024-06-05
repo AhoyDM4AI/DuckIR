@@ -1,5 +1,5 @@
-#include "duckdb/plugin/physical/common/file_system/dl.hpp"
-#include "duckdb/plugin/physical/common/file_system/virtual_file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/dl.hpp"
+#include "duckdb/runtime/default/common/file_system/virtual_file_system.hpp"
 #include "duckdb/main/extension_helper.hpp"
 #include "duckdb/main/error_manager.hpp"
 #include "mbedtls_wrapper.hpp"

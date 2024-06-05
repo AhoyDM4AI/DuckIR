@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/common/serializer/write_stream.hpp"
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 
 namespace duckdb {
 

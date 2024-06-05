@@ -12,7 +12,7 @@
 #include "duckdb/parser/result_modifier.hpp"
 #include "duckdb/planner/bound_statement.hpp"
 #include "duckdb/planner/expression.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 
 namespace duckdb {
 

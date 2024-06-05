@@ -1,4 +1,4 @@
-#include "duckdb/storage/statistics/segment_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/segment_statistics.hpp"
 
 #include "duckdb/common/exception.hpp"
 

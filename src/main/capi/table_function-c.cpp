@@ -3,7 +3,7 @@
 #include "duckdb/parser/parsed_data/create_table_function_info.hpp"
 #include "duckdb/catalog/catalog.hpp"
 #include "duckdb/main/client_context.hpp"
-#include "duckdb/storage/statistics/node_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/node_statistics.hpp"
 
 namespace duckdb {
 

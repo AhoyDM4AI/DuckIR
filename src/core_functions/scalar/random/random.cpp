@@ -1,6 +1,6 @@
 #include "duckdb/core_functions/scalar/random_functions.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/vector_operations.hpp"
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/vector_operations.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 #include "duckdb/main/client_context.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/common/random_engine.hpp"

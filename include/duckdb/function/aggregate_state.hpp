@@ -9,8 +9,8 @@
 #pragma once
 
 #include "duckdb/sql_function/function.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
-#include "duckdb/storage/statistics/node_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/node_statistics.hpp"
 
 namespace duckdb {
 

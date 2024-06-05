@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/plugin/physical/common/file_system/file_opener.hpp"
+#include "duckdb/runtime/default/common/file_system/file_opener.hpp"
 
 namespace duckdb {
 

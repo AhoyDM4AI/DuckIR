@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/plugin/physical/common/types/column/column_data_collection.hpp"
+#include "duckdb/runtime/default/common/types/column/column_data_collection.hpp"
 #include "duckdb/planner/logical_operator.hpp"
 
 namespace duckdb {

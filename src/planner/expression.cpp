@@ -3,7 +3,7 @@
 #include "duckdb/common/exception.hpp"
 #include "duckdb/common/types/hash.hpp"
 #include "duckdb/planner/expression_iterator.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 #include "duckdb/planner/expression/list.hpp"
 #include "duckdb/parser/expression_util.hpp"
 

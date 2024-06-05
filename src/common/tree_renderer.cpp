@@ -1,12 +1,12 @@
 #include "duckdb/common/tree_renderer.hpp"
 #include "duckdb/planner/logical_operator.hpp"
-#include "duckdb/plugin/physical/execution/physical_operator.hpp"
+#include "duckdb/runtime/default/execution/physical_operator.hpp"
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/pair.hpp"
-#include "duckdb/plugin/physical/execution/operator/join/physical_delim_join.hpp"
-#include "duckdb/plugin/physical/execution/operator/aggregate/physical_hash_aggregate.hpp"
-#include "duckdb/plugin/physical/execution/operator/scan/physical_positional_scan.hpp"
-#include "duckdb/plugin/physical/parallel/pipeline.hpp"
+#include "duckdb/runtime/default/execution/operator/join/physical_delim_join.hpp"
+#include "duckdb/runtime/default/execution/operator/aggregate/physical_hash_aggregate.hpp"
+#include "duckdb/runtime/default/execution/operator/scan/physical_positional_scan.hpp"
+#include "duckdb/runtime/default/parallel/pipeline.hpp"
 #include "utf8proc_wrapper.hpp"
 
 #include <sstream>

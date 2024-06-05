@@ -1,7 +1,7 @@
 #include "catch.hpp"
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 #include "test_helpers.hpp"
-#include "duckdb/plugin/physical/common/file_system/local_file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/local_file_system.hpp"
 
 using namespace duckdb;
 using namespace std;

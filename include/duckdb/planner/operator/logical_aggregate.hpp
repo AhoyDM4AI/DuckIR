@@ -10,7 +10,7 @@
 
 #include "duckdb/planner/logical_operator.hpp"
 #include "duckdb/planner/column_binding.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 #include "duckdb/parser/group_by_node.hpp"
 
 namespace duckdb {

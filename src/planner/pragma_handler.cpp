@@ -11,7 +11,7 @@
 #include "duckdb/main/client_context.hpp"
 
 #include "duckdb/common/string_util.hpp"
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 #include "duckdb/function/function_binder.hpp"
 
 namespace duckdb {

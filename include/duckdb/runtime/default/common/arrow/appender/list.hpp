@@ -1,0 +1,8 @@
+#include "duckdb/runtime/default/common/arrow/appender/bool_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/enum_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/list_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/map_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/scalar_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/struct_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/union_data.hpp"
+#include "duckdb/runtime/default/common/arrow/appender/varchar_data.hpp"

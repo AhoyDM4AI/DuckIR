@@ -11,7 +11,7 @@
 #include "duckdb/common/unordered_set.hpp"
 #include "duckdb/function/scalar/compressed_materialization_functions.hpp"
 #include "duckdb/planner/column_binding_map.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 
 namespace duckdb {
 

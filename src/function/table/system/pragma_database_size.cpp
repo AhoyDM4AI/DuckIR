@@ -1,8 +1,8 @@
 #include "duckdb/function/table/system_functions.hpp"
 
-#include "duckdb/plugin/physical/storage/storage_manager.hpp"
-#include "duckdb/plugin/physical/storage/block_manager.hpp"
-#include "duckdb/plugin/physical/storage/storage_info.hpp"
+#include "duckdb/runtime/default/storage/storage_manager.hpp"
+#include "duckdb/runtime/default/storage/block_manager.hpp"
+#include "duckdb/runtime/default/storage/storage_info.hpp"
 #include "duckdb/common/to_string.hpp"
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/main/attached_database.hpp"

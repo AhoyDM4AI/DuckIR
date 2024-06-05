@@ -4,7 +4,7 @@
 #include "duckdb/parser/expression/bound_expression.hpp"
 #include "duckdb/function/scalar/nested_functions.hpp"
 #include "duckdb/common/case_insensitive_map.hpp"
-#include "duckdb/storage/statistics/struct_stats.hpp"
+#include "duckdb/runtime/default/storage/statistics/struct_stats.hpp"
 #include "duckdb/planner/expression_binder.hpp"
 
 namespace duckdb {

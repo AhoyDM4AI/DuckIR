@@ -1,4 +1,4 @@
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 #include "duckdb/parser/parsed_data/create_pragma_function_info.hpp"
 #include "duckdb/parser/parser.hpp"
 #include "json_deserializer.hpp"

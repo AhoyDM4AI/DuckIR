@@ -1,5 +1,5 @@
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
-#include "duckdb/plugin/physical/execution/reservoir_sample.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/reservoir_sample.hpp"
 #include "duckdb/core_functions/aggregate/holistic_functions.hpp"
 #include "duckdb/planner/expression.hpp"
 #include "duckdb/common/queue.hpp"

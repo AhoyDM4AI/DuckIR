@@ -1,7 +1,7 @@
 #include "duckdb/main/database_path_and_type.hpp"
 
 #include "duckdb/main/extension_helper.hpp"
-#include "duckdb/plugin/physical/storage/magic_bytes.hpp"
+#include "duckdb/runtime/default/storage/magic_bytes.hpp"
 
 namespace duckdb {
 

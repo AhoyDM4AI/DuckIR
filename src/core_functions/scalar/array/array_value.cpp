@@ -1,6 +1,6 @@
 #include "duckdb/core_functions/scalar/array_functions.hpp"
 #include "duckdb/function/scalar/nested_functions.hpp"
-#include "duckdb/storage/statistics/array_stats.hpp"
+#include "duckdb/runtime/default/storage/statistics/array_stats.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 
 namespace duckdb {

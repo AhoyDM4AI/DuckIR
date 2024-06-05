@@ -13,7 +13,7 @@
 #include "duckdb/common/types/hugeint.hpp"
 #include "duckdb/common/types/string_type.hpp"
 #include "duckdb/common/types/value.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
 #include <cmath>
 
 namespace duckdb {

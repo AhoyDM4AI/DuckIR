@@ -1,6 +1,6 @@
 #include "duckdb/function/table/system_functions.hpp"
 
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 #include "duckdb/common/map.hpp"
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/function/function_set.hpp"

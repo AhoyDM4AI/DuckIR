@@ -1,6 +1,6 @@
 #include "capi_tester.hpp"
-#include "duckdb/plugin/physical/common/arrow/arrow_appender.hpp"
-#include "duckdb/plugin/physical/common/arrow/arrow_converter.hpp"
+#include "duckdb/runtime/default/common/arrow/arrow_appender.hpp"
+#include "duckdb/runtime/default/common/arrow/arrow_converter.hpp"
 
 using namespace duckdb;
 using namespace std;

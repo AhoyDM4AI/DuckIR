@@ -1,9 +1,9 @@
 #include "duckdb/common/string_util.hpp"
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 #include "duckdb/function/scalar/nested_functions.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/planner/expression/bound_parameter_expression.hpp"
-#include "duckdb/storage/statistics/struct_stats.hpp"
+#include "duckdb/runtime/default/storage/statistics/struct_stats.hpp"
 
 namespace duckdb {
 

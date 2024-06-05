@@ -119,7 +119,7 @@
 #ifndef U_HIDE_INTERNAL_API
 /**
  * @{
- * Opaque structure passed to/from a plugin. 
+ * Opaque structure passed to/from a runtime.
  * use the APIs to access it.
  * @internal ICU 4.4 Technology Preview
  */
@@ -130,7 +130,7 @@ typedef struct UPlugData UPlugData;
 /** @} */
 
 /**
- * Random Token to identify a valid ICU plugin. Plugins must return this 
+ * Random Token to identify a valid ICU runtime. Plugins must return this
  * from the entrypoint.
  * @internal ICU 4.4 Technology Preview
  */
@@ -144,7 +144,7 @@ typedef struct UPlugData UPlugData;
 
 
 /**
- * Return value from a plugin entrypoint. 
+ * Return value from a runtime entrypoint.
  * Must always be set to UPLUG_TOKEN
  * @see UPLUG_TOKEN
  * @internal ICU 4.4 Technology Preview
@@ -156,9 +156,9 @@ typedef uint32_t UPlugTokenReturn;
  * @internal ICU 4.4 Technology Preview
  */
 typedef enum {
-    UPLUG_REASON_QUERY = 0,     /**< The plugin is being queried for info. **/
-    UPLUG_REASON_LOAD = 1,     /**< The plugin is being loaded. **/
-    UPLUG_REASON_UNLOAD = 2,   /**< The plugin is being unloaded. **/
+    UPLUG_REASON_QUERY = 0,     /**< The runtime is being queried for info. **/
+    UPLUG_REASON_LOAD = 1,     /**< The runtime is being loaded. **/
+    UPLUG_REASON_UNLOAD = 2,   /**< The runtime is being unloaded. **/
     /**
      * Number of known reasons.
      * @internal The numeric value may change over time, see ICU ticket #12420.
@@ -168,17 +168,17 @@ typedef enum {
 
 
 /**
- * Level of plugin loading
+ * Level of runtime loading
  *     INITIAL:  UNKNOWN
  *       QUERY:   INVALID ->  { LOW | HIGH }
  *     ERR -> INVALID
  * @internal ICU 4.4 Technology Preview
  */
 typedef enum {
-    UPLUG_LEVEL_INVALID = 0,     /**< The plugin is invalid, hasn't called uplug_setLevel, or can't load. **/
-    UPLUG_LEVEL_UNKNOWN = 1,     /**< The plugin is waiting to be installed. **/
-    UPLUG_LEVEL_LOW     = 2,     /**< The plugin must be called before u_init completes **/
-    UPLUG_LEVEL_HIGH    = 3,     /**< The plugin can run at any time. **/
+    UPLUG_LEVEL_INVALID = 0,     /**< The runtime is invalid, hasn't called uplug_setLevel, or can't load. **/
+    UPLUG_LEVEL_UNKNOWN = 1,     /**< The runtime is waiting to be installed. **/
+    UPLUG_LEVEL_LOW     = 2,     /**< The runtime must be called before u_init completes **/
+    UPLUG_LEVEL_HIGH    = 3,     /**< The runtime can run at any time. **/
     /**
      * Number of known levels.
      * @internal The numeric value may change over time, see ICU ticket #12420.
@@ -187,10 +187,10 @@ typedef enum {
 } UPlugLevel;
 
 /**
- * Entrypoint for an ICU plugin.
+ * Entrypoint for an ICU runtime.
  * @param plug the UPlugData handle. 
- * @param status the plugin's extended status code.
- * @return A valid plugin must return UPLUG_TOKEN
+ * @param status the runtime's extended status code.
+ * @return A valid runtime must return UPLUG_TOKEN
  * @internal ICU 4.4 Technology Preview
  */
 typedef UPlugTokenReturn (U_EXPORT2 UPlugEntrypoint) (
@@ -201,29 +201,29 @@ typedef UPlugTokenReturn (U_EXPORT2 UPlugEntrypoint) (
 /* === Needed for Implementing === */
 
 /**
- * Request that this plugin not be unloaded at cleanup time.
+ * Request that this runtime not be unloaded at cleanup time.
  * This is appropriate for plugins which cannot be cleaned up.
  * @see u_cleanup()
- * @param plug plugin
- * @param dontUnload  set true if this plugin can't be unloaded
+ * @param plug runtime
+ * @param dontUnload  set true if this runtime can't be unloaded
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL void U_EXPORT2 
 uplug_setPlugNoUnload(UPlugData *plug, UBool dontUnload);
 
 /**
- * Set the level of this plugin.
- * @param plug plugin data handle
- * @param level the level of this plugin
+ * Set the level of this runtime.
+ * @param plug runtime data handle
+ * @param level the level of this runtime
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL void U_EXPORT2
 uplug_setPlugLevel(UPlugData *plug, UPlugLevel level);
 
 /**
- * Get the level of this plugin.
- * @param plug plugin data handle
- * @return the level of this plugin
+ * Get the level of this runtime.
+ * @param plug runtime data handle
+ * @return the level of this runtime
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL UPlugLevel U_EXPORT2
@@ -242,33 +242,33 @@ uplug_getCurrentLevel(void);
 
 /**
  * Get plug load status
- * @return The error code of this plugin's load attempt.
+ * @return The error code of this runtime's load attempt.
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL UErrorCode U_EXPORT2
 uplug_getPlugLoadStatus(UPlugData *plug); 
 
 /**
- * Set the human-readable name of this plugin.
- * @param plug plugin data handle
- * @param name the name of this plugin. The first UPLUG_NAME_MAX characters willi be copied into a new buffer.
+ * Set the human-readable name of this runtime.
+ * @param plug runtime data handle
+ * @param name the name of this runtime. The first UPLUG_NAME_MAX characters willi be copied into a new buffer.
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL void U_EXPORT2
 uplug_setPlugName(UPlugData *plug, const char *name);
 
 /**
- * Get the human-readable name of this plugin.
- * @param plug plugin data handle
- * @return the name of this plugin
+ * Get the human-readable name of this runtime.
+ * @param plug runtime data handle
+ * @return the name of this runtime
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL const char * U_EXPORT2
 uplug_getPlugName(UPlugData *plug);
 
 /**
- * Return the symbol name for this plugin, if known.
- * @param plug plugin data handle
+ * Return the symbol name for this runtime, if known.
+ * @param plug runtime data handle
  * @return the symbol name, or NULL
  * @internal ICU 4.4 Technology Preview
  */
@@ -276,8 +276,8 @@ U_INTERNAL const char * U_EXPORT2
 uplug_getSymbolName(UPlugData *plug);
 
 /**
- * Return the library name for this plugin, if known.
- * @param plug plugin data handle
+ * Return the library name for this runtime, if known.
+ * @param plug runtime data handle
  * @param status error code
  * @return the library name, or NULL
  * @internal ICU 4.4 Technology Preview
@@ -286,9 +286,9 @@ U_INTERNAL const char * U_EXPORT2
 uplug_getLibraryName(UPlugData *plug, UErrorCode *status);
 
 /**
- * Return the library used for this plugin, if known.
+ * Return the library used for this runtime, if known.
  * Plugins could use this to load data out of their 
- * @param plug plugin data handle
+ * @param plug runtime data handle
  * @return the library, or NULL
  * @internal ICU 4.4 Technology Preview
  */
@@ -296,8 +296,8 @@ U_INTERNAL void * U_EXPORT2
 uplug_getLibrary(UPlugData *plug);
 
 /**
- * Return the plugin-specific context data.
- * @param plug plugin data handle
+ * Return the runtime-specific context data.
+ * @param plug runtime data handle
  * @return the context, or NULL if not set
  * @internal ICU 4.4 Technology Preview
  */
@@ -305,8 +305,8 @@ U_INTERNAL void * U_EXPORT2
 uplug_getContext(UPlugData *plug);
 
 /**
- * Set the plugin-specific context data.
- * @param plug plugin data handle
+ * Set the runtime-specific context data.
+ * @param plug runtime data handle
  * @param context new context to set
  * @internal ICU 4.4 Technology Preview
  */
@@ -317,7 +317,7 @@ uplug_setContext(UPlugData *plug, void *context);
 /**
  * Get the configuration string, if available.
  * The string is in the platform default codepage.
- * @param plug plugin data handle
+ * @param plug runtime data handle
  * @return configuration string, or else null.
  * @internal ICU 4.4 Technology Preview
  */
@@ -336,14 +336,14 @@ uplug_getConfiguration(UPlugData *plug);
  * Not thread safe- do not call while plugs are added or removed.
  * @param prior pass in 'NULL' to get the first (most recent) plug, 
  *  otherwise pass the value returned on a prior call to uplug_nextPlug
- * @return the next oldest plugin, or NULL if no more.
+ * @return the next oldest runtime, or NULL if no more.
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL UPlugData* U_EXPORT2
 uplug_nextPlug(UPlugData *prior);
 
 /**
- * Inject a plugin as if it were loaded from a library.
+ * Inject a runtime as if it were loaded from a library.
  * This is useful for testing plugins. 
  * Note that it will have a 'NULL' library pointer associated
  * with it, and therefore no llibrary will be closed at cleanup time.
@@ -351,7 +351,7 @@ uplug_nextPlug(UPlugData *prior);
  * @param entrypoint entrypoint to install
  * @param config user specified configuration string, if available, or NULL.
  * @param status error result
- * @return the new UPlugData associated with this plugin, or NULL if error.
+ * @return the new UPlugData associated with this runtime, or NULL if error.
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL UPlugData* U_EXPORT2
@@ -359,22 +359,22 @@ uplug_loadPlugFromEntrypoint(UPlugEntrypoint *entrypoint, const char *config, UE
 
 
 /**
- * Inject a plugin from a library, as if the information came from a config file.
+ * Inject a runtime from a library, as if the information came from a config file.
  * Low level plugins may not be able to load, and ordering can't be enforced.
  * @param libName DLL name to load
- * @param sym symbol of plugin (UPlugEntrypoint function)
+ * @param sym symbol of runtime (UPlugEntrypoint function)
  * @param config configuration string, or NULL
  * @param status error result
- * @return the new UPlugData associated with this plugin, or NULL if error.
+ * @return the new UPlugData associated with this runtime, or NULL if error.
  * @internal ICU 4.4 Technology Preview
  */
 U_INTERNAL UPlugData* U_EXPORT2
 uplug_loadPlugFromLibrary(const char *libName, const char *sym, const char *config, UErrorCode *status);
 
 /**
- * Remove a plugin. 
- * Will request the plugin to be unloaded, and close the library if needed
- * @param plug plugin handle to close
+ * Remove a runtime.
+ * Will request the runtime to be unloaded, and close the library if needed
+ * @param plug runtime handle to close
  * @param status error result
  * @internal ICU 4.4 Technology Preview
  */

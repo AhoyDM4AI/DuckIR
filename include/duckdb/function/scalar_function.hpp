@@ -8,13 +8,13 @@
 
 #pragma once
 
-#include "duckdb/plugin/physical/common/types/vector_operations/binary_executor.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/ternary_executor.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/unary_executor.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/vector_operations.hpp"
-#include "duckdb/plugin/physical/execution/expression_executor_state.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/binary_executor.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/ternary_executor.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/unary_executor.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/vector_operations.hpp"
+#include "duckdb/runtime/default/execution/expression_executor_state.hpp"
 #include "duckdb/sql_function/function.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 #include "duckdb/common/optional_ptr.hpp"
 
 namespace duckdb {

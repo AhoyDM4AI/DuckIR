@@ -9,8 +9,8 @@
 
 #include "duckdb/common/exception.hpp"
 #include "duckdb/common/limits.hpp"
-#include "duckdb/plugin/physical/storage/data_table.hpp"
-#include "duckdb/plugin/physical/storage/table_storage_info.hpp"
+#include "duckdb/runtime/default/storage/data_table.hpp"
+#include "duckdb/runtime/default/storage/table_storage_info.hpp"
 #include "duckdb/planner/binder.hpp"
 
 #include <algorithm>

@@ -1,6 +1,6 @@
 #include "duckdb/main/capi/capi_internal.hpp"
 #include "duckdb/common/types/timestamp.hpp"
-#include "duckdb/plugin/physical/common/allocator.hpp"
+#include "duckdb/runtime/default/common/allocator.hpp"
 
 namespace duckdb {
 

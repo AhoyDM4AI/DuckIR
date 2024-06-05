@@ -1,4 +1,4 @@
-#include "duckdb/storage/statistics/distinct_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/distinct_statistics.hpp"
 
 #include "duckdb/common/string_util.hpp"
 

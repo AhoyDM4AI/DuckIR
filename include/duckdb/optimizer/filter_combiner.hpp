@@ -15,7 +15,7 @@
 #include "duckdb/planner/filter/conjunction_filter.hpp"
 #include "duckdb/planner/filter/constant_filter.hpp"
 
-#include "duckdb/plugin/physical/storage/data_table.hpp"
+#include "duckdb/runtime/default/storage/data_table.hpp"
 #include <functional>
 #include <map>
 

@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/common/common.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
 
 namespace duckdb {
 

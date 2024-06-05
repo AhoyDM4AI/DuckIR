@@ -64,7 +64,7 @@ else()
   add_subdirectory(storage)
   # add_subdirectory(transaction)
   add_subdirectory(verification)
-  add_subdirectory(plugin)
+  add_subdirectory(runtime)
 
   set(DUCKDB_LINK_LIBS
       ${DUCKDB_SYSTEM_LIBS}

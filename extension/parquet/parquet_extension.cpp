@@ -21,11 +21,11 @@
 #include "duckdb/catalog/catalog_entry/table_function_catalog_entry.hpp"
 #include "duckdb/common/constants.hpp"
 #include "duckdb/common/enums/file_compression_type.hpp"
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
-#include "duckdb/plugin/physical/common/file_system/multi_file_reader.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/multi_file_reader.hpp"
 #include "duckdb/common/serializer/deserializer.hpp"
 #include "duckdb/common/serializer/serializer.hpp"
-#include "duckdb/plugin/physical/common/types/chunk_collection.hpp"
+#include "duckdb/runtime/default/common/types/chunk_collection.hpp"
 #include "duckdb/function/copy_function.hpp"
 #include "duckdb/function/pragma_function.hpp"
 #include "duckdb/function/table_function.hpp"
@@ -38,8 +38,8 @@
 #include "duckdb/parser/parsed_data/create_table_function_info.hpp"
 #include "duckdb/parser/tableref/table_function_ref.hpp"
 #include "duckdb/planner/operator/logical_get.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
-#include "duckdb/plugin/physical/storage/table/row_group.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/table/row_group.hpp"
 #endif
 
 namespace duckdb {

@@ -12,9 +12,9 @@
 #include "duckdb/sql_function/function.hpp"
 #include "duckdb/common/enums/compression_type.hpp"
 #include "duckdb/common/map.hpp"
-#include "duckdb/plugin/physical/storage/storage_info.hpp"
+#include "duckdb/runtime/default/storage/storage_info.hpp"
 #include "duckdb/common/mutex.hpp"
-#include "duckdb/plugin/physical/storage/data_pointer.hpp"
+#include "duckdb/runtime/default/storage/data_pointer.hpp"
 
 namespace duckdb {
 class DatabaseInstance;

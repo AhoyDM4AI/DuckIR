@@ -6,8 +6,8 @@
 #include "duckdb/catalog/catalog_entry/index_catalog_entry.hpp"
 #include "duckdb/common/exception.hpp"
 #include "duckdb/main/client_data.hpp"
-#include "duckdb/plugin/physical/storage/data_table.hpp"
-#include "duckdb/plugin/physical/storage/index.hpp"
+#include "duckdb/runtime/default/storage/data_table.hpp"
+#include "duckdb/runtime/default/storage/index.hpp"
 
 namespace duckdb {
 

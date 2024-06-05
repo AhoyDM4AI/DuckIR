@@ -1,4 +1,4 @@
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 #include "duckdb/core_functions/aggregate/holistic_functions.hpp"
 #include "t_digest.hpp"
 #include "duckdb/planner/expression.hpp"

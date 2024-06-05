@@ -1,5 +1,5 @@
 #include "duckdb/core_functions/scalar/string_functions.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/vector_operations.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/vector_operations.hpp"
 #include "duckdb/common/string_util.hpp"
 
 #include <ctype.h>

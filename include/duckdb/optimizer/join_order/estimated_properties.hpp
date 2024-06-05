@@ -13,7 +13,7 @@
 #include "duckdb/optimizer/join_order/join_relation.hpp"
 #include "duckdb/parser/expression_map.hpp"
 #include "duckdb/planner/logical_operator_visitor.hpp"
-#include "duckdb/storage/statistics/distinct_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/distinct_statistics.hpp"
 #include "duckdb/planner/table_filter.hpp"
 
 namespace duckdb {

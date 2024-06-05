@@ -6,8 +6,8 @@
 #include "duckdb/common/types/interval.hpp"
 #include "duckdb/common/types/time.hpp"
 #include "duckdb/common/types/timestamp.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/ternary_executor.hpp"
-#include "duckdb/plugin/physical/common/types/vector_operations/vector_operations.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/ternary_executor.hpp"
+#include "duckdb/runtime/default/common/types/vector_operations/vector_operations.hpp"
 #include "duckdb/common/string_util.hpp"
 
 namespace duckdb {

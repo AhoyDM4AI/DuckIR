@@ -1,4 +1,4 @@
-#include "duckdb/storage/statistics/column_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/column_statistics.hpp"
 #include "duckdb/common/serializer/deserializer.hpp"
 #include "duckdb/common/serializer/serializer.hpp"
 

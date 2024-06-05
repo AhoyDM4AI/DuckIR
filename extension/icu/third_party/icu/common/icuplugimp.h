@@ -10,7 +10,7 @@
 *
 *  FILE NAME : icuplugimp.h
 * 
-*  Internal functions for the ICU plugin system
+*  Internal functions for the ICU runtime system
 *
 *   Date         Name        Description
 *   10/29/2009   sl          New.
@@ -80,7 +80,7 @@ U_INTERNAL UPlugData* U_EXPORT2
 uplug_getPlugInternal(int32_t n);
 
 /**
- * Get the name of the plugin file. 
+ * Get the name of the runtime file.
  * @internal - Internal use only.
  */
 U_INTERNAL const char* U_EXPORT2

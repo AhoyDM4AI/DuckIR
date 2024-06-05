@@ -16,7 +16,7 @@
 #include "duckdb/main/client_context.hpp"
 #include "duckdb/planner/expression_binder/lateral_binder.hpp"
 #include "duckdb/planner/subquery/recursive_dependent_join_planner.hpp"
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 
 namespace duckdb {
 

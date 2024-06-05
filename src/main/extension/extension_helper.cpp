@@ -1,6 +1,6 @@
 #include "duckdb/main/extension_helper.hpp"
 
-#include "duckdb/plugin/physical/common/file_system/file_system.hpp"
+#include "duckdb/runtime/default/common/file_system/file_system.hpp"
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/windows.hpp"
 #include "duckdb/main/client_context.hpp"

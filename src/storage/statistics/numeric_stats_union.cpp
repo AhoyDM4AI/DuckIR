@@ -1,4 +1,4 @@
-#include "duckdb/storage/statistics/numeric_stats_union.hpp"
+#include "duckdb/runtime/default/storage/statistics/numeric_stats_union.hpp"
 
 namespace duckdb {
 

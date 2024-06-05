@@ -3,7 +3,7 @@
 #include "duckdb/planner/expression/bound_aggregate_expression.hpp"
 #include "duckdb/common/pair.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
 
 namespace duckdb {
 

@@ -1,9 +1,9 @@
-#include "duckdb/plugin/physical/execution/expression_executor.hpp"
+#include "duckdb/runtime/default/execution/expression_executor.hpp"
 #include "duckdb/parser/parsed_data/create_pragma_function_info.hpp"
 #include "duckdb/parser/parser.hpp"
 #include "duckdb/planner/planner.hpp"
 #include "duckdb/optimizer/optimizer.hpp"
-#include "duckdb/plugin/physical/execution/column_binding_resolver.hpp"
+#include "duckdb/runtime/default/execution/column_binding_resolver.hpp"
 
 #include "json_deserializer.hpp"
 #include "json_functions.hpp"

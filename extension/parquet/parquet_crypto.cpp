@@ -5,7 +5,7 @@
 
 #ifndef DUCKDB_AMALGAMATION
 #include "duckdb/common/common.hpp"
-#include "duckdb/plugin/physical/storage/arena_allocator.hpp"
+#include "duckdb/runtime/default/storage/arena_allocator.hpp"
 #endif
 
 namespace duckdb {

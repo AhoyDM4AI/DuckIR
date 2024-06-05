@@ -1,5 +1,5 @@
 #include "duckdb/planner/filter/null_filter.hpp"
-#include "duckdb/storage/statistics/base_statistics.hpp"
+#include "duckdb/runtime/default/storage/statistics/base_statistics.hpp"
 
 namespace duckdb {
 

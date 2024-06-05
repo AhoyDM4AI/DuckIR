@@ -19,7 +19,7 @@
 #include "duckdb/common/operator/convert_to_string.hpp"
 #include "duckdb/common/types/null_value.hpp"
 #include "duckdb/common/types/bit.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
 
 namespace duckdb {
 struct ValidityMask;

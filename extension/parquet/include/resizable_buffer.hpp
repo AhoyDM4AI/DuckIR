@@ -9,7 +9,7 @@
 
 #include "duckdb.hpp"
 #ifndef DUCKDB_AMALGAMATION
-#include "duckdb/plugin/physical/common/allocator.hpp"
+#include "duckdb/runtime/default/common/allocator.hpp"
 #endif
 
 #include <exception>

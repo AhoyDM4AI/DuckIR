@@ -19,10 +19,10 @@
 #ifndef DUCKDB_AMALGAMATION
 
 #include "duckdb/common/operator/cast_operators.hpp"
-#include "duckdb/plugin/physical/common/types/chunk_collection.hpp"
+#include "duckdb/runtime/default/common/types/chunk_collection.hpp"
 #include "duckdb/common/types/string_type.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector.hpp"
-#include "duckdb/plugin/physical/common/types/vector/vector_cache.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector.hpp"
+#include "duckdb/runtime/default/common/types/vector/vector_cache.hpp"
 #endif
 
 namespace duckdb {
